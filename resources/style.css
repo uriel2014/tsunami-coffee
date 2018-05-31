@@ -1,0 +1,111 @@
+html,
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: white;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/*Each container will be centered with the margin property
+above and will have a max width of 960px */
+.main {
+  height: 30rem;
+  padding-top: 1rem;
+}
+/* The main section will have a height relative to hmtl so 30(16)
+and a padding-top of 16px*/
+
+.main img {
+  width: 15rem;
+  display: block;
+  margin: auto;
+  margin-top: 5rem;
+}
+/* The main image will have a width relatve to hmtl 15(16)
+with a display of block and a margin-top relative to html 5(16)
+all else have automatic margin.*/
+
+nav {
+  background-color: OrangeRed;
+  color: White;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+/* No margin between ul and outside*/
+li {
+  display: inline-block;
+}
+
+.supporting,
+.rating,
+.gallery,
+.location {
+  margin: 4em auto;
+}
+
+.supporting {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 1rem;
+}
+/*The supporting class will have fle items align vertically
+by flex-start */
+.supporting img{
+
+}
+
+.rating {
+  background-color: OrangeRed;
+  height: 20rem;
+  padding: 0 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*The rating will have content centered both vertically and
+horizontally, with left & right padding, a height of
+20 (16px)*/
+
+.rating h1 {
+
+}
+
+.gallery img {
+  display: block;
+  width: 30%;
+  margin: 1.5%;
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.location {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.location img {
+
+}
+
+footer {
+  background-color: OrangeRed;
+  padding: 0 1rem;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5em 0;
+  color: white;
+}
