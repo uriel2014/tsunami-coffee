@@ -19,14 +19,17 @@ above and will have a max width of 960px */
 and a padding-top of 16px*/
 
 .main img {
-  width: 15rem;
+  width: 30rem;
   display: block;
   margin: auto;
   margin-top: 5rem;
+  background-image:url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tsunami-coffee/images/bg-photo.png");
+  background-size:cover;
 }
 /* The main image will have a width relatve to hmtl 15(16)
 with a display of block and a margin-top relative to html 5(16)
-all else have automatic margin.*/
+all else have automatic margin.
+We add a background image and make it a cover. */
 
 nav {
   background-color: OrangeRed;
@@ -41,6 +44,13 @@ ul {
 li {
   display: inline-block;
 }
+
+nav li{
+    padding:0.75rem 1.25rem;
+  }
+
+/* Here we want to increase the sixe of the nav li with respect to the html*/
+
 
 .supporting,
 .rating,
@@ -57,8 +67,15 @@ li {
 /*The supporting class will have fle items align vertically
 by flex-start */
 .supporting img{
-
+  height:10%;
+  width:10%;
 }
+/* decrease the sixe of the image with percentage  */
+
+.description {
+  margin-right: 5%;
+}
+/* Align the description next to the image to have a small margin away from the image */
 
 .rating {
   background-color: OrangeRed;
@@ -74,8 +91,9 @@ horizontally, with left & right padding, a height of
 20 (16px)*/
 
 .rating h1 {
-
+font-size:2.5rem;
 }
+/* Increase font-size of the rating font relative to html*/
 
 .gallery img {
   display: block;
@@ -83,19 +101,23 @@ horizontally, with left & right padding, a height of
   margin: 1.5%;
   float: left;
 }
-
+/* image to appear left and occupy a width of 30% */
 .clearfix {
   clear: both;
 }
+/* This is to clear the floating property after usage*/
 
 .location {
   text-align: center;
   margin-bottom: 7rem;
 }
+/* align text to the center around
+ensure there is space between margin-bottom to the content*/
 
 .location img {
-
+width: 100%;
 }
+/*give the image a width of 100% */
 
 footer {
   background-color: OrangeRed;
@@ -109,3 +131,38 @@ footer .container {
   padding: 5em 0;
   color: white;
 }
+
+/*All flex items in the footer will be aligen center for vertical alignment but will
+have space between each flex item.  */
+
+@media only screen and (max-width:960px){
+  .main{
+    padding-top:0;
+  }
+}
+/* For a screen of max-width of 960px or lower,
+we have the main section have no padding space from content to the top*/
+@media only screen and (max-width:700px){
+    .supporting img{
+      display:none;
+    }
+  }
+  /* For screens that are at max-width of 700px or lower,
+  we restrict the supporting image from showing*/
+@media only screen and (max-width:470px){
+    .rating h1{
+      font-size:2rem;
+    }
+    .gallery img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  float: left;
+}
+footer nav{
+   display:none;
+ }
+  }
+  /*For evern smaller screens less than 470px,
+  we change font-size of rating h1, gallery image take up full screen width
+  and the navigation of the footer stays hidden. */
